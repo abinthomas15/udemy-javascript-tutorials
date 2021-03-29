@@ -368,3 +368,103 @@ It shows wheather the content is there or not by saying true or false
 ```
 val = str.includes('hello')
 ```
+
+## Template Strings or Literals :
+```
+const name = 'Jhon';
+const age = 22;
+const job = 'web developer'
+const city = 'Miami'
+let html
+
+function hello(){
+  return 'hello';
+}
+
+html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City: ${city}</li>
+    <li>${2 + 2}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? 'over 30' : 'under 30'} </li>
+  </ul>
+`
+```
+
+### Arrays and array methods :
+
+arrays are used to store multiple values in one variable and they can be mutated and irreated and used with very complex algoritham.
+```
+const numbers = [43,56,33,23,44,36,5];
+const numbers2 = new Array(22,55,36,47,1);
+const fruits = ['Apple', 'Orange', 'Bannana', 'Pear'];
+const mixed = [22, 'apple', true, undefined, null, {a:1, b:1}, new Date()];
+let val;
+```
+These are the some arrays we can have in javascript there are many more..
+
+##### To get Array Length
+```
+val = numbers.length;
+```
+##### To check for an Array 
+```
+val = Array.isArray(numbers);
+```
+
+##### To get a single value from an array
+```
+val = numbers[2];
+
+console.log(numbers);
+console.log(val);
+```
+
+##### Insert into Arrays :
+```
+numbers[2] = 100; 
+```
+
+##### Find the index of Value:
+```
+val = numbers.indexOf(36);
+
+```
+
+##### Mutating Arrays
+
+```
+numbers.push(250);
+
+``` 
+250 will be added to the array at the back of the array
+
+##### Unshift
+it is used to add a number to the begining of the array.
+```
+numbers.unshift(122);
+```
+
+#### Take off from the end
+It is used to delete the end element of the array
+```
+numbers.pop();
+```
+
+#### Take from the start
+It is used to delete the first element of the array
+```
+  numbers.shift();
+
+```
+
+#### Splice Values 
+It is used to remove the elemnts first value is the starting of the index second value is the ending. ie, they will take the values accordin to the given range  
+```
+numbers.splice(1,3  );
+```
+
+#####
