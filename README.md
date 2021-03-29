@@ -7,11 +7,12 @@
 ``` var ='Jhon Doe'
 console.log(name);
 name = 'steve smith';
-console.log(name); ```
+console.log(name);```
 
 * Initializing variables
+
 ``` var greetings;
 console.log(greetings);
 greeting = 'hello';
-console.log(greetings);
+console.log(greetings); ```
 
