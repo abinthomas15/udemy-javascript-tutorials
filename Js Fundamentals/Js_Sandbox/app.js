@@ -91,3 +91,26 @@ val = numbers[2];
 numbers[2] = 100;
 console.log(numbers)
 console.log(val);
+
+const person = {
+  firstName : 'Steve',
+  lastName : 'jobs',
+  age : 30,
+  email : 'stevejobs@gmail.com',
+  hobbies : ['music' ,'sports'],
+
+  adress : {
+    city : 'Miami',
+    state : 'Florida'
+  },
+
+  getBirthYear : function(){
+    return 2021 - this.age;
+  }
+}
+
+let val;
+
+val = person.firstName;
+
+console.log(val)

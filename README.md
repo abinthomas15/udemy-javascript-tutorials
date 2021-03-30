@@ -464,7 +464,459 @@ It is used to delete the first element of the array
 #### Splice Values 
 It is used to remove the elemnts first value is the starting of the index second value is the ending. ie, they will take the values accordin to the given range  
 ```
-numbers.splice(1,3  );
+numbers.splice(1,3);
 ```
 
-#####
+### Object Literals
+
+```
+const person = {
+  firstName : 'Steve',
+  lastName : 'jobs',
+  age : 30,
+  email : 'stevejobs@gmail.com',
+  hobbies : ['music' ,'sports'],
+
+  adress : {
+    city : 'Miami',
+    state : 'Florida'
+  },
+
+  getBirthYear : function(){
+    return 2021 - this.age;
+  }
+}
+
+val = person;
+
+val = person.firstName;
+
+val = person['firstName'];
+
+val = person.age;
+
+val = person.hobbies[1];
+
+val = person.address.state;
+
+val = person.getBirthYear();
+
+console.log(val);
+
+```
+
+#### arrays of object : 
+```
+const people = {
+  {name : 'Jhon', age : 30},
+  {name : 'Mike', age : 23}
+};
+
+for(let i = 0; i < people.length; i++){
+  console.log(people[i].name)
+}
+```
+
+### Dates and Times : 
+
+```
+let val;
+
+const today = new Date();
+const birthday = new Date(15-06-1998);
+
+val = today;
+val = today.getMonth();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+console.log(val);
+
+```
+Month is usually represented from 0 to 11 
+ie, January will be 0 feb will be 1 and like that..
+
+```
+let birthday;
+birthday = new Date ('15-06-1998');
+birthday.setMonth(3);
+bithday.setFullyear(1997);
+birthday.setDate(17);
+console.log(birthday);
+
+```
+
+### If Statements and Comparison Operators :
+```
+if(something){
+  do something
+} else{
+  do something else
+}
+```
+This is the main structure of if statements.
+
+##### Equal to operations in if
+```
+const id = 100;
+if(id == 100){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+```
+
+#### Not equal to
+```
+if(id != 100){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+```
+#### Equal to value and type :
+```
+if(id === 100){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+```
+
+#### Equal to value and type :
+
+```
+if(id !== 100){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+```
+
+#### Test if Undefined :
+```
+if(typeof id !== 'undefined'){
+  console.log(`The ID is ${id}`);
+} else{
+  console.log('no ID');
+}
+```
+#### Greater than or lessthan
+```
+if(id > 200){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+
+if(id <= 200){
+  console.log('CORRECT');
+} else{
+  console.log('INCORRECT');
+}
+```
+#### If else statement:
+```
+const color = 'red';
+
+if(color === 'red'){
+  console.log('color is red');
+} else if(color === 'blue'){
+  console.log('color is blue');
+} else{
+  console.log('color is not red or blue')
+}
+```
+#### Logical Operators :
+```
+ const name  = 'Steve';
+ const age = 30;
+ ```
+
+ ###### AND &&
+ ```
+ if(age > 0 && age < 12){
+   console.log(`${name} is a child`)
+ } else if (age >12  && age < 19){
+   console.log(`${name} is a teenager`)
+ } else{
+   console.log(`${name} is an adult`)
+ }
+ ```
+  ###### OR ||
+  ```
+if(age < 16 || agr >60){
+  console.log(`${name} can not run in the race`)
+} else{
+  console.log(`${name} can run in the race`)
+}
+```
+
+##### Ternary Operations:
+```
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+```
+
+
+* In javascript the curly braces are optional we can do things without it
+  if(id==100)
+    console.log('CORRECT');
+  else
+    console.log(INCORRECT);
+
+
+### SWITHCES
+
+```
+const color = blue;
+
+switch(color){
+  case 'red':
+    console.log('color is red');
+    break;
+  case 'blue':
+    console.log('color is blue');   
+    break;
+  default:
+  console.log('color is not red or blue);
+  break;
+}
+```
+
+switch(new Date().getDay()){
+  case 0:
+    day = sunday;
+    break;
+   case 1:
+    day = monday;
+    break;
+   case 2:
+    day = tuesday;
+    break;
+   case 3:
+    day = wednesday;
+    break;
+   case 4:
+    day = thursday;
+    break;
+   case 5:
+    day = saturday;
+    break;
+   case 6:
+    day = sunday;
+    break;
+}
+console.log(`today is ${day}`)
+
+## FUNCTIONS
+  They are block of codes that can be defined and then called anywhere in the program.
+
+#### Function Declarations :
+```
+function greet(){
+  console.log('Hello');
+}
+
+greet();
+```
+
+```
+function greet(){
+  retund 'Hello';
+}
+
+console.log(greet());
+```
+```
+function greet(firstName, lastName){
+  retund 'Hello' + firstName + ' ' + lastName;
+}
+
+console.log(greet('Abin','Thomas'));
+```
+
+```
+function greet(firstName = 'Abin', lastName = 'Thomas'){
+  retund 'Hello' + firstName + ' ' + lastName;
+}
+
+console.log(greet());
+```
+#### Function Expressions :
+
+```
+const square = function(x){
+  return x*x;
+};
+
+console.log(square(3));
+```
+
+#### Propert Methods
+when a function is put inside a object it is called as a method
+
+```
+const todo = {
+  add : function(){
+    console.log('Add todo..');
+  },
+  edit : function(){
+    console.log('Delete todo  )
+  }
+}
+todo.add();
+```
+
+### General Loops : 
+for loops
+while loops
+do-while loops
+
+#### For Loops :
+```
+for(let i = 0 ; i < 10; i++){
+  console.log(i);
+}
+```
+
+```
+for(let i = 0 ; i < 10; i++){
+  if(i === 2){
+   console.log('2 is my favourite number); 
+   continue;
+  }
+  console.log('Number' + i);
+}
+```
+
+```
+for(let i = 0 ; i < 10; i++){
+  if(i === 2){
+   console.log('2 is my favourite number); 
+   continue;
+  }
+  if(i === 4){
+    console.log('stop the loop');
+    break;
+  }
+  console.log('Number' + i);
+}
+```
+
+#### While Loop :
+```
+let i = 0;
+while(i <10){
+  console.log('number' + i);
+  i++;
+}
+```
+
+#### Do while loop :
+```
+let i = 0;
+
+do{
+  console.log('Number' + i);
+  i++;
+}
+while(i < 10);
+```
+The main difference between while and do while is do while is going to run alteast no matter what the condition is.
+
+#### Loop through arrays:
+```
+const cars = ['ford', 'chevy', 'honda', 'Toyota'];
+
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
+} 
+```
+
+#### For each array loop.
+```
+cars.forEach(function(){
+  console.log(car);
+});
+```
+
+#### Map
+ to return a different array
+```
+const users = [
+  {id:1 name:'jhon'}
+  {id:2 name:'sara'}
+  {id:3 name:'Karen'}
+];
+```
+### Window Object / Methods / Properties :
+ 
+ ##### Alert :
+ ```
+ window.alert('Hello World');
+```
+
+ ##### Prompt :
+ ```
+ const input = prompt();
+ alert();
+```
+ ##### Confirm :
+```
+if(confirm('Are you sure ?')){
+  console.log('YES');
+}else{
+  conslog.log('NO');
+}
+```
+
+##### Outer Height and width :
+```
+let val;
+val = window.outerHeight;
+val = window.outerWidth;
+console.log(val);
+```
+
+##### inner Height and width :
+```
+let val;
+val = window.innerHeight;
+val = window.innerWidth;
+console.log(val);
+```
+
+##### Scroll points :
+```
+let val;
+val = window.scrollY;
+console.log(val);
+```
+### Global Scope :
+```
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test(){
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('Function Scope: ', a, b, c);
+}
+
+console.log('Global Scope: ', a, b, c);
+```
+#### block level scope :
+```
+if(true) {
+   var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('Block Scope: ', a, b, c);
+}
+```
+
+
