@@ -212,4 +212,35 @@ const li = document.createElement('li');
 ``` val = link.hasAttribute('href'); ``` -> It will give true or false while checking wheather it is present or not.
 ``` val = link.removeAttribute('href'); ``` 
 
+#### Events in Dom
+``` 
+document.querySelector('clear-tasks').addEventsListner('click',
+function(){
+  console.log('helo world');
+  e.preventDefault();
+});  
+```
+This preventDefault feature is preventing the a tag to go to its link and showing the console hello world.
+by deafult the hello world message will flash down the console very quick and it will get redirectd to the given link in the 
+href.
+This can be prevented by adding the # symbol to the href so that it gets redirected to same page itself.
+
+Inorder of using the anonymus function we can also use the named function.
+
+```
+ document.querySelector('clear-tasks').addEventsListner('click',onClcick);
+
+ function onClick(e){
+   console.log('clicked');  
+   let val;
+   val = e;
+   val = e.target;
+   console.log(val);
+ }; 
+
+```
+
+### Local Storage Item 
+
+local storage will stay until you clear it with your programs. but the session storage will be cleared once the browser is reloaded or closed. 
 
