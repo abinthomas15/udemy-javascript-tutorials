@@ -53,3 +53,13 @@ Nowdays JSON is replaced with XML
 * HEAD : Same as get but does not return a body
 * OPTIONS : Returns the supported HTTP Methods
 * PATCH : Update partial resources
+
+## Arrow Function
+
+using some key symbols we can make the code shorter
+one line function even does not need the braces
+
+
+## Async and Await
+
+whenever we are using async to begining of the function the we get a promise in the console
